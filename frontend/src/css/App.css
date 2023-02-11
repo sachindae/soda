@@ -1,3 +1,11 @@
 .textshadow {
     text-shadow: 0px 0px 1px black;
 }
+
+.resizer {
+    cursor: col-resize;
+    height: 100%;
+    right: 0;
+    top: 0;
+    width: 5px;
+}
