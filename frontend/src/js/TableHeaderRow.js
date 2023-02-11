@@ -32,6 +32,8 @@ export default function TableHeaderRow({columns, fromChildToParentCallback}){
             console.log("Mouse Up")
             document.removeEventListener("mousemove", onMouseMoveResize);
             document.removeEventListener("mouseup", onMouseUpResize);
+            fromChildToParentCallback(leftColIdx, parseFloat(window.getComputedStyle(leftBox).width, 10), 
+                                      rightColIdx, parseFloat(window.getComputedStyle(rightBox).width, 10));
         }
 
         // 2. Mouse moving, do resizing

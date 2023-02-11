@@ -2,7 +2,6 @@ import React from "react";
 
 export default class Input extends React.Component { 
 
-    //({_id, row, col, addKeyListenerFn}){
     constructor(props){
         super(props);
 
@@ -10,21 +9,19 @@ export default class Input extends React.Component {
         this.id = props._id
 
         this.onFocus = () => {
-            console.log('Focused: ' + props._id);
+            //console.log('Focused: ' + props._id);
             props.addKeyListenerFn(props.row, props.col, true);
         }
     
         this.onBlur = () => {
-            console.log('Unfocused: ' + props._id);
+            //console.log('Unfocused: ' + props._id);
             props.addKeyListenerFn(props.row, props.col, false);
         }
     }
 
-    //this.boundEventHandler = keyListenerFn.bind(this, row, col)
-    
     render(){
         return (
-            <input type="text" id={this.id} onFocus={this.onFocus} onBlur={this.onBlur}/>
+            <input type="text" id={this.id} onFocus={this.onFocus} onBlur={this.onBlur} />
         )
     }
 }

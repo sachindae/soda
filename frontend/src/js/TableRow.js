@@ -12,6 +12,8 @@ export default class TableRow extends React.Component{
         this.row = 0;
         this.col = 0;
 
+        //console.log(this.props)
+
         this.keyListenerFn = (e) => {
             console.log(e)
             console.log(e.code, this.row, this.col)
@@ -61,7 +63,6 @@ export default class TableRow extends React.Component{
             }
         }
     }
-
     
     render(){
         return(
